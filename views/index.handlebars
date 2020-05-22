@@ -1,0 +1,83 @@
+<div class="container">
+
+    <div class="title">
+        <span class="blue">
+            <h1>NBA 2017</h1>
+        </span>
+        <span class="blue">
+            <h1>-</h1>
+        </span>
+        <span>
+            <h1>2018 Season</h1>
+        </span>
+    </div>
+
+    <div class="form-container">
+        <form id="my-form">
+            <input type="text" name="firstName" placeholder="Player's first name" id="firstName">
+            <input type="text" name="lastName" placeholder="Player's last name" id="lastName">
+            <input type="submit" class="btn btn-primary" value="Search" id="search-btn">
+        </form>
+    </div>
+
+    <img src="{{data.image_link}}">
+
+    <div class="player-stats">
+        <div class="stat-container">
+            <div class="stat-title">
+                <p>Games Played</p>
+            </div>
+            <div class="stat-value">
+                <p>{{data.stats.games_played}}</p>
+            </div>
+        </div>
+        <div class="stat-container">
+            <div class="stat-title">
+                <p>Minutes Per Game</p>
+            </div>
+            <div class="stat-value">
+                <p>{{data.stats.minutes_per_game}}</p>
+            </div>
+        </div>
+        <div class="stat-container">
+            <div class="stat-title">
+                <p>Field Goal %</p>
+            </div>
+            <div class="stat-value">
+                <p>{{data.stats.field_goal_percentage}}</p>
+            </div>
+        </div>
+        <div class="stat-container">
+            <div class="stat-title">
+                <p>Free Throw %</p>
+            </div>
+            <div class="stat-value">
+                <p>{{data.stats.free_throw_percentage}}</p>
+            </div>
+        </div>
+        <div class="stat-container">
+            <div class="stat-title">
+                <p>3 Point %</p>
+            </div>
+            <div class="stat-value">
+                <p>{{data.stats.three_point_percentage}}</p>
+            </div>
+        </div>
+        <div class="stat-container">
+            <div class="stat-title">
+                <p>Points Per Game</p>
+            </div>
+            <div class="stat-value">
+                <p>{{data.stats.points_per_game}}</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#search-btn').on('click', () =>{
+            const firstName = $('#firstName').val();
+            const lastName = $('#lastName').val();
+            $('#my-form').attr('action', `/players/${firstName}/${lastName}`);
+        });
+    </script>
+</div>

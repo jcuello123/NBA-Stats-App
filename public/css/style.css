@@ -1,0 +1,83 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+    background: rgb(9, 9, 121);
+    background: radial-gradient(circle, rgba(9, 9, 121, 1) 11%, rgba(2, 0, 36, 1) 46%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: 5000px 5000px;
+}
+
+.blue {
+    color: #007bff
+}
+
+.title span {
+    display: inline-block;
+}
+
+.title h1 {
+    font-size: 60px;
+}
+
+input[type=text] {
+    margin: 10px;
+}
+
+img {
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+.player-stats {
+    border: 2px solid #007bff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stat-container {
+    display: inline-block;
+    margin: 10px;
+    margin-left: 5px;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+
+.stat-container:last-child {
+    border: none;
+}
+
+.stat-title p {
+    color: #007bff;
+}
+
+.stat-value {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .stat-container {
+        display: block;
+        border: none;
+    }
+    .player-stats {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 80%;
+    }
+    .form-container {
+        display: block;
+        text-align: center;
+    }
+    #search-btn {
+        width: 50%
+    }
+}
