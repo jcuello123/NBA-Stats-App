@@ -41,14 +41,9 @@ app.get('/', (req, res) => {
 });
 
 //Routes
-//Catch 404 error
-app.use((req, res) => {
-    res.status(404).render('error');
-})
-
 app.get('/', (req, res) => {
     res.send('allo');
-})
+});
 
 app.get('/players/:firstName/:lastName', async(req, res) => {
     const firstName = req.params.firstName;
@@ -66,6 +61,11 @@ app.get('/players/:firstName/:lastName', async(req, res) => {
     } catch (err) {
         console.log(err)
     }
+});
+
+//Catch 404 error
+app.use(function(req, res) {
+    res.status(404).render('error');
 });
 
 //Server start & port
