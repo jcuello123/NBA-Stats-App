@@ -59,13 +59,13 @@ app.get('/players/:firstName/:lastName', async(req, res) => {
         playerData = data;
         res.redirect('/');
     } catch (err) {
-        console.log(err)
+        res.render('error');
     }
 });
 
 //Catch 404 error
 app.use(function(req, res) {
-    res.status(404).render('error');
+    res.render('error');
 });
 
 //Server start & port
