@@ -1,3 +1,5 @@
+/* index page */
+
 body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     color: #f0c808;
@@ -78,4 +80,15 @@ img {
     #search-btn {
         width: 50%
     }
+}
+
+
+/* error page */
+
+.error-title {
+    font-size: 60px;
+}
+
+.error-text {
+    color: #086788;
 }

@@ -41,6 +41,11 @@ app.get('/', (req, res) => {
 });
 
 //Routes
+//Catch 404 error
+app.use((req, res) => {
+    res.status(404).render('error');
+})
+
 app.get('/', (req, res) => {
     res.send('allo');
 })
