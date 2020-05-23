@@ -21,6 +21,7 @@ async function initPlayerData() {
     }
 }
 
+
 initPlayerData();
 
 //Set static folder
